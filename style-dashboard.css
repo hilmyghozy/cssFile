@@ -1,0 +1,540 @@
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i, span {
+    display: block;
+    
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #fff;
+    color: rgb(51, 51, 51);
+    transition: all 0.3s;
+    box-shadow: 2px 0px 9px rgba(0, 0, 0, 0.4);
+}
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3, #sidebar.active .CTAs {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #fff;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+.name-user{
+    color: blue;
+}
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #64c4ed;
+}
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #4f81c7;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #4f81c7;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article, a.article:hover {
+    background: #4f81c7 !important;
+    color: #fff !important;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.navbar-default .navbar-nav>li>a{
+    color:#777;
+}.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{
+    color: #333;
+    background-color:transparent
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important ;
+        box-shadow: none;
+    }
+    a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+        top: auto;
+        bottom: 5px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+        
+    box-shadow: 2px 0px 9px rgba(0, 0, 0, 0.4);
+    }
+
+    #sidebar .sidebar-header h3, #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right:  0;
+        display: block;
+    }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }    
+}
+
+table {
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #4f81c7; 
+    color: white; 
+    font-weight: bold;
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+  }
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }  
+    tr { border: 1px solid #ccc; }
+      
+      td { 
+          border: none;
+          border-bottom: 1px solid #eee; 
+          position: relative;
+          padding-left: 50%;
+          text-align: left;
+      }
+      
+      td:before { 
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 45%; 
+          padding-right: 10px; 
+          white-space: nowrap;
+      }
+      td:nth-of-type(1):before { content: "No"; }
+      td:nth-of-type(2):before { content: "Odc"; }
+      td:nth-of-type(3):before { content: "Lokasi"; }
+      td:nth-of-type(4):before { content: "Latitude"; }
+      td:nth-of-type(5):before { content: "Longtitude"; }
+      td:nth-of-type(6):before { content: "Opsi"; }
+}
+.pagination{
+    display: inline-block;
+}.pagination a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    background: transparent;
+    transition: background-color .3s;
+}.pagination a.active{
+    background-color: #4f81c7;
+    color: white;
+}.pagination a:hover{
+    background: #4f81c7a9;
+}.pagination a.active:hover{
+    background-color: #4f81c7;
+    color: white;
+}
+.detail a{
+    color: #fff;
+    background: #4f81c7;
+    padding: 0px 15px; 
+    border-radius: 5px;
+}.opsi{
+    width: 15%;
+}.number{
+    width: 5%;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  .savedb,.row a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }.row .back{
+      background: #4f81c7;
+  }
+  
+  .savedb:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .col-25 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+  }
+  .col-35 {
+    float: left;
+    width: 23%;
+    margin-top: 6px;
+  }.col-35.lat{
+      margin-right: 4%;
+  }
+  .col-75 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75 {
+      width: 100%;
+      margin-top: 0;
+    }.col-35{
+        width: 47%;
+    }.col-35.lat{
+        margin-right: 6%;
+    }input[type=submit]{
+        width: 100%;
+        margin-top: 15px;
+    }
+  }
+
+/* pop up button */
+.open-button {
+    background-color: #4f81c7;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 120px;
+  }
+  
+  .hidden {
+        display: none;
+  }.form-popup{
+        display: block !important;
+        position: relative;
+        z-index: 9;
+  }
+  .form-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+/* searching form */
+.searching{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.searching .inline{
+    display: inline-block;
+}.searching input[type=text]{
+    width: 30%;
+    padding: 9px 13px;
+    border: 1px solid #45a049;
+    border-radius: none;
+    float: right;
+    position: relative;
+    right: 35px;
+}.searchbtn{
+    background-color: #45a049;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}.resetbtn{
+    background-color: orange;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 120px;
+}.btngroup{
+    position: absolute;
+    display: inline;
+    right: 0;
+}
+#myForm{
+    z-index: 999 !important;
+}
+
+@media screen and (max-width: 500px) {
+    .open-button{
+        width: 40px;
+    }.searching input[type=text]{
+        width: 75%;
+    }
+}
